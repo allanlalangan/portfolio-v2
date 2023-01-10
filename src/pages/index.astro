@@ -1,17 +1,22 @@
 ---
+import Main from '../layouts/Main.astro';
+const icon = 'ᾰ';
+const about = {
+	name: { first: 'Allan', last: 'Lalangan' },
+	title: 'Front End Engineer',
+	skills: ['HTML', 'CSS', 'JavaScript'],
+};
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Allan Lalangan | Front End Engineer</title>
-	</head>
-	<body>
-		<header class='text-xl'>allanLa</header>
-		<main></main>
-		<footer>footer</footer>
-	</body>
-</html>
+<Main title='Allan Lalangan | Front-End Engineer'>
+	<main>
+		<section class='hero'>
+			<p>Hello, world. I'm</p>
+			<h1>{`${about.name.first} ${about.name.last}`}</h1>
+			<p>
+				I build and design accessible and aesthetically pleasing websites and
+				apps.
+			</p>
+		</section>
+	</main>
+</Main>
