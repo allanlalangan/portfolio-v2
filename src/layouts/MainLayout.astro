@@ -7,11 +7,9 @@ const { title } = Astro.props;
 	<head>
 		<meta charset='utf-8' />
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-		<link rel='preconnect' href='https://fonts.googleapis.com' /><link
-			rel='preconnect'
-			href='https://fonts.gstatic.com'
-			crossorigin
-		/><link
+		<link rel='preconnect' href='https://fonts.googleapis.com' />
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+		<link
 			href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap'
 			rel='stylesheet'
 		/>
@@ -21,13 +19,13 @@ const { title } = Astro.props;
 	</head>
 	<body class='bg-gray-800 font-body text-slate-50'>
 		<header class='mx-12 mt-6 flex justify-between border border-yellow-300'>
-			<span class='border-r border-yellow-300 py-4 px-8 text-5xl italic'>
+			<a href='/' class='border-r border-yellow-300 py-4 px-8 text-5xl italic'>
 				{icon}
-			</span>
+			</a>
 			<nav class='mx-8 flex'>
 				<ul class='m-auto flex border border-yellow-300 p-2'>
 					<li class='mx-4'><a href='/'>Projects</a></li>
-					<li class='mx-4'><a href='/'>Me</a></li>
+					<li class='mx-4'><a href='/about'>About Me</a></li>
 					<li class='mx-4'><a href='/'>Contact</a></li>
 				</ul>
 			</nav>
