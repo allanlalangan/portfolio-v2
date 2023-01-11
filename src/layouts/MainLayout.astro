@@ -1,0 +1,40 @@
+---
+const icon = 'ᾰ';
+const { title } = Astro.props;
+
+import '../styles/global.css';
+---
+
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<link rel='preconnect' href='https://fonts.googleapis.com' /><link
+			rel='preconnect'
+			href='https://fonts.gstatic.com'
+			crossorigin
+		/><link
+			href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap'
+			rel='stylesheet'
+		/>
+		<meta name='viewport' content='width=device-width' />
+		<meta name='generator' content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class='bg-slate-500 font-body text-slate-50'>
+		<header class='mx-12 mt-6 flex border border-slate-50 text-xl'>
+			<span class='border-r border-slate-50 py-4 px-8 text-5xl italic'>
+				{icon}
+			</span>
+			<nav>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</nav>
+		</header>
+		<slot />
+		<footer>footer</footer>
+	</body>
+</html>
