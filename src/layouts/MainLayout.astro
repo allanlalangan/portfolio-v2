@@ -1,8 +1,6 @@
 ---
 const icon = 'ᾰ';
 const { title } = Astro.props;
-
-import '../styles/global.css';
 ---
 
 <html lang='en'>
@@ -21,20 +19,22 @@ import '../styles/global.css';
 		<meta name='generator' content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class='bg-slate-500 font-body text-slate-50'>
-		<header class='mx-12 mt-6 flex border border-slate-50 text-xl'>
-			<span class='border-r border-slate-50 py-4 px-8 text-5xl italic'>
+	<body class='bg-gray-800 font-body text-slate-50'>
+		<header class='mx-12 mt-6 flex justify-between border border-yellow-300'>
+			<span class='border-r border-yellow-300 py-4 px-8 text-5xl italic'>
 				{icon}
 			</span>
-			<nav>
-				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+			<nav class='mx-8 flex'>
+				<ul class='m-auto flex border border-yellow-300 p-2'>
+					<li class='mx-4'><a href='/'>Projects</a></li>
+					<li class='mx-4'><a href='/'>Me</a></li>
+					<li class='mx-4'><a href='/'>Contact</a></li>
 				</ul>
 			</nav>
 		</header>
-		<slot />
-		<footer>footer</footer>
+		<main class='m-12'>
+			<slot />
+		</main>
+		<footer class='p-12'>footer</footer>
 	</body>
 </html>
