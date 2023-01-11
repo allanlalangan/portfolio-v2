@@ -18,13 +18,13 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class='bg-gray-800 font-body text-slate-50'>
-		<header class='mx-12 mt-6 flex justify-between border border-yellow-300'>
-			<a href='/' class='border-r border-yellow-300 py-4 px-8 text-5xl italic'>
+		<header class='mx-12 mt-6 flex justify-between'>
+			<a href='/' class='py-4 px-8 text-5xl font-bold italic text-yellow-200'>
 				{icon}
 			</a>
 			<nav class='mx-8 flex'>
-				<ul class='m-auto flex border border-yellow-300 p-2'>
-					<li class='mx-4'><a href='/'>Projects</a></li>
+				<ul class='m-auto flex'>
+					<li class='mx-4'><a href='/projects'>Projects</a></li>
 					<li class='mx-4'><a href='/about'>About Me</a></li>
 					<li class='mx-4'><a href='/'>Contact</a></li>
 				</ul>
