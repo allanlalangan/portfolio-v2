@@ -1,7 +1,8 @@
 ---
+import ServiceCard from '../components/ServiceCard.astro';
 import MainLayout from '../layouts/MainLayout.astro';
+import { services } from '../data/data';
 
-const icon = 'ᾰ';
 const about = {
 	name: { first: 'Allan', last: 'Lalangan' },
 	title: 'Front End Engineer',
@@ -22,5 +23,8 @@ const about = {
 	</section>
 	<section>
 		<h2>My Services</h2>
+		<ul class='grid grid-cols-12 gap-4'>
+			{services?.map((service, i) => <ServiceCard key={i} service={service} />)}
+		</ul>
 	</section>
 </MainLayout>
