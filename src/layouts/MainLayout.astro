@@ -1,0 +1,38 @@
+---
+const icon = 'ᾰ';
+const { title } = Astro.props;
+---
+
+<html lang='en'>
+	<head>
+		<meta charset='utf-8' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<link rel='preconnect' href='https://fonts.googleapis.com' />
+		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+		<link
+			href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap'
+			rel='stylesheet'
+		/>
+		<meta name='viewport' content='width=device-width' />
+		<meta name='generator' content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class='bg-gray-900 font-body text-slate-50'>
+		<header class='mx-8 mt-6 flex justify-between'>
+			<a href='/' class='py-4 px-8 text-5xl font-bold italic text-yellow-200'>
+				{icon}
+			</a>
+			<nav class='flex'>
+				<ul class='m-auto flex'>
+					<li class='mx-4'><a href='/projects'>Projects</a></li>
+					<li class='mx-4'><a href='/about'>About Me</a></li>
+					<li class='mx-4'><a href='/contact'>Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class='mx-12'>
+			<slot />
+		</main>
+		<footer class='p-12'>footer</footer>
+	</body>
+</html>
