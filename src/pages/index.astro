@@ -13,16 +13,20 @@ const about = {
 <MainLayout title='Allan Lalangan | Front-End Engineer'>
 	<section class='p-12'>
 		<p class='text-xl'>Hello, world. I'm</p>
-		<h1 class='font-display text-8xl font-bold'>
-			{`${about.name.first} ${about.name.last}`}
+		<h1 class='flex flex-col font-display text-8xl font-bold'>
+			<span>{`${about.name.first}`}</span>
+			<span>{`${about.name.last}.`}</span>
 		</h1>
-		<p class='text-xl'>
+		<p class='text-5xl'>Front-end Engineer</p>
+		<!-- <p class='text-xl'>
 			I build and design accessible and aesthetically pleasing websites and
 			apps.
-		</p>
+		</p> -->
 	</section>
 	<section>
-		<h2>My Services</h2>
+		<h2 class='font-display text-2xl font-semibold text-yellow-300'>
+			My Services
+		</h2>
 		<ul class='grid grid-cols-12 gap-4'>
 			{services?.map((service, i) => <ServiceCard key={i} service={service} />)}
 		</ul>
