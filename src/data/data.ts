@@ -3,6 +3,22 @@ type Service = {
 	description: string;
 };
 
+type DemoCredentials = {
+	email: string;
+	password: string;
+};
+
+type Project = {
+	title: string;
+	description: string;
+	tech: string[];
+	image: string;
+	repo: string;
+	url: string;
+	complete: boolean;
+	demo?: DemoCredentials;
+};
+
 export const services: Service[] = [
 	{
 		name: 'UI/UX Design',
@@ -19,6 +35,73 @@ export const services: Service[] = [
 		description:
 			'Search Engine Optimization is a necessity for thriving businesses. Rank higher in Google searches to maximize your reach.',
 	},
+	{
+		name: 'Technical Writing',
+		description:
+			'Search Engine Optimization is a necessity for thriving businesses. Rank higher in Google searches to maximize your reach.',
+	},
+];
+
+export const projects: Project[] = [
+	{
+		title: 'Stars Astro',
+		description:
+			'A niche social platform. Generate and post astrology charts. Share cosmic wisdom and/or nonsense. Full stack app with a CRUD REST API and user authentication.',
+		tech: [
+			'express',
+			'mongodb',
+			'react',
+			'react router',
+			'tailwind css',
+			'redux',
+			'web tokens',
+			'rest api',
+		],
+		image: '',
+		repo: 'https://github.com/allanlalangan/stars',
+		url: 'https://stars-astro.netlify.app/',
+		complete: true,
+		demo: { email: 'demo@demo', password: 'Demo1234!' },
+	},
+	{
+		title: 'Nomad Travel',
+		description:
+			'Locate and filter popular restaurants, hotels, and attractions anywhere in the world.',
+		tech: ['react', 'material ui', 'google apis', 'rest api'],
+		image: '',
+		repo: 'https://github.com/allanlalangan/nomad-travel',
+		url: 'https://nononomad.netlify.app/',
+		complete: true,
+	},
+	// {
+	// 	title: "Martial Arts Academy",
+	// 	description:
+	// 		"A responsive landing page design for a local martial arts gym.",
+	// 	tech: ["next", "tailwind css"],
+	// 	image: '',
+	// 	repo: "https://github.com/allanlalangan/martial-masters-academy",
+	// 	url: "https://mm-acdmy.netlify.app/",
+	// 	complete: true,
+	// },
+	// {
+	// 	title: "project.Me",
+	// 	description: "A fullstack to-do list app. Registered users can save goals.",
+	// 	tech: [
+	// 		"express",
+	// 		"mongodb",
+	// 		"react",
+	// 		"react router",
+	// 		"sass",
+	// 		"redux",
+	// 		"web tokens",
+	// 		"rest api",
+	// 	],
+	// 	image: '',
+	// 	repo: "https://github.com/allanlalangan/dashboard",
+	// 	url: "https://ladev-projectme.netlify.app",
+	// 	complete: true,
+	// 	demo: { email: "demo@demo", password: "demo" },
+	// },
 ];
 
 export {};
