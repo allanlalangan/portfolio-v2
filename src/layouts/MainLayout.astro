@@ -1,6 +1,8 @@
 ---
 const icon = 'ᾰ';
 const { title } = Astro.props;
+const date = new Date();
+const year = date.getFullYear();
 ---
 
 <html lang='en'>
@@ -18,21 +20,30 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body class='bg-gray-900 font-body text-slate-50'>
-		<header class='mx-8 mt-6 flex justify-between'>
-			<a href='/' class='py-4 px-8 text-5xl font-bold italic text-yellow-200'>
+		<header
+			class='fixed top-0 flex h-[10vh] w-full items-center justify-between bg-gray-900 px-4 shadow'
+		>
+			<a
+				href='/'
+				class='w-fit font-times text-5xl font-bold italic text-yellow-200'
+			>
 				{icon}
 			</a>
-			<nav class='flex'>
-				<ul class='m-auto flex'>
+			<nav class='ml-8 flex w-full items-center justify-between'>
+				<ul class='flex justify-start'>
 					<li class='mx-4'><a href='/projects'>Projects</a></li>
 					<li class='mx-4'><a href='/about'>About Me</a></li>
 					<li class='mx-4'><a href='/contact'>Contact</a></li>
 				</ul>
+				<button class='bg-yellow-200 px-4 py-2 font-bold text-gray-900'
+					>Contact</button
+				>
 			</nav>
 		</header>
-		<main class='mx-12'>
+		<main class='mt-[10vh]'>
 			<slot />
 		</main>
-		<footer class='p-12'>footer</footer>
+		<footer class='p-12'><p>Allan Lalangan © {year}</p></footer>
+		<p></p>
 	</body>
 </html>
