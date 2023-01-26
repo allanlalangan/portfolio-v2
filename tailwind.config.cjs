@@ -4,6 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
+				times: ['"Times New Roman"', 'serif'],
 				body: ['"Space Grotesk"', 'serif'],
 				display: ['"Syne"', 'serif'],
 			},
