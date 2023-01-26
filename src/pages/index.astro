@@ -12,28 +12,35 @@ const about = {
 ---
 
 <MainLayout title='Allan Lalangan | Front-End Engineer'>
-	<section class='p-6 md:p-12'>
-		<p class='text-xl'>Hello, world. I'm</p>
-		<h1 class='flex flex-col font-display text-6xl font-bold md:text-8xl'>
+	<section class='mx-4 flex h-[85vh] flex-col justify-center'>
+		<!-- <p class='text-xl'>Hello, world. I'm</p> -->
+		<p class='text-3xl md:text-5xl'>Software Developer</p>
+		<h1
+			class='flex flex-col font-display text-8xl font-bold text-yellow-200 md:text-8xl'
+		>
 			<span>{`${about.name.first}`}</span>
 			<span>{`${about.name.last}.`}</span>
 		</h1>
-		<p class='text-3xl md:text-5xl'>Front-end Engineer</p>
 	</section>
-	<section class='mt-24'>
-		<h2 class='mb-12 font-display text-4xl font-semibold text-yellow-300'>
-			My Services
+	<section class='mx-4 mt-24'>
+		<h2 class='mb-12 font-display text-6xl font-semibold text-yellow-200'>
+			What I Do
 		</h2>
-		<ul class='grid grid-cols-12 gap-4'>
+		<ul class='grid grid-cols-12 gap-4 px-4'>
 			{services?.map((service, i) => <ServiceCard key={i} service={service} />)}
 		</ul>
 	</section>
-	<section class='mt-24'>
-		<h2 class='mb-12 font-display text-4xl font-semibold text-yellow-300'>
+	<section class='mx-4 mt-24'>
+		<h2 class='mb-12 font-display text-6xl font-semibold text-yellow-200'>
 			Selected Works
 		</h2>
-		<ul class='grid grid-cols-12 gap-4'>
+		<ul class='mx-24 grid grid-cols-12 gap-4'>
 			{projects?.map((project, i) => <ProjectCard key={i} project={project} />)}
 		</ul>
+	</section>
+	<section class='mx-4 mt-24'>
+		<h2 class='mb-12 font-display text-6xl font-semibold text-yellow-200'>
+			More About Me
+		</h2>
 	</section>
 </MainLayout>
