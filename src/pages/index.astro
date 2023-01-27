@@ -13,17 +13,33 @@ const about = {
 
 <MainLayout title='Allan Lalangan | Front-End Engineer'>
 	<section class='mx-4 flex h-[85vh] flex-col justify-center'>
-		<!-- <p class='text-xl'>Hello, world. I'm</p> -->
-		<p class='text-3xl md:text-5xl'>Software Developer</p>
-		<h1
-			class='flex flex-col font-display text-8xl font-bold text-yellow-200 md:text-8xl'
-		>
-			<span>{`${about.name.first}`}</span>
-			<span>{`${about.name.last}.`}</span>
-		</h1>
+		<article>
+			<!-- <p class='text-xl'>Hello, world. I'm</p> -->
+			<p class='text-3xl md:text-5xl'>Software Developer</p>
+			<h1
+				class='flex flex-col font-display text-7xl font-bold text-yellow-200 md:text-9xl'
+			>
+				<span>{`${about.name.first}`}</span>
+				<span>{`${about.name.last}.`}</span>
+			</h1>
+		</article>
+		<article class='flex justify-end p-4'>
+			<span class='shadow-lG grid w-1/2 grid-cols-4 gap-4 bg-slate-700 p-4'>
+				<p class='col-span-2 border border-yellow-200 p-2 text-slate-50'>
+					I build and design responsive and aesthetically pleasing websites and
+					apps.
+				</p>
+				<p class='col-span-2 border border-yellow-200 p-2 text-slate-50'>
+					I help brands scale and expand their online presence.
+				</p>
+			</span>
+			<button class='ml-4 bg-yellow-200 px-4 py-2 text-slate-900'
+				>Learn More</button
+			>
+		</article>
 	</section>
 	<section class='mx-4 mt-24'>
-		<h2 class='mb-12 font-display text-6xl font-semibold text-yellow-200'>
+		<h2 class='mb-12 font-display text-7xl font-semibold text-yellow-200'>
 			What I Do
 		</h2>
 		<ul class='grid grid-cols-12 gap-4 px-4'>
@@ -31,15 +47,15 @@ const about = {
 		</ul>
 	</section>
 	<section class='mx-4 mt-24'>
-		<h2 class='mb-12 font-display text-6xl font-semibold text-yellow-200'>
+		<h2 class='mb-12 font-display text-7xl font-semibold text-yellow-200'>
 			Selected Works
 		</h2>
-		<ul class='mx-24 grid grid-cols-12 gap-4'>
+		<ul class='mx-24 grid grid-cols-12 gap-4 lg:mx-48'>
 			{projects?.map((project, i) => <ProjectCard key={i} project={project} />)}
 		</ul>
 	</section>
 	<section class='mx-4 mt-24'>
-		<h2 class='mb-12 font-display text-6xl font-semibold text-yellow-200'>
+		<h2 class='mb-12 font-display text-7xl font-semibold text-yellow-200'>
 			More About Me
 		</h2>
 	</section>
