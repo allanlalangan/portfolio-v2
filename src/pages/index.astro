@@ -3,6 +3,7 @@ import ServiceCard from '../components/ServiceCard.astro';
 import MainLayout from '../layouts/MainLayout.astro';
 import { services, projects } from '../data/data';
 import ProjectCard from '../components/ProjectCard.astro';
+import { Icon } from 'astro-icon';
 
 const about = {
 	name: { first: 'Allan', last: 'Lalangan' },
@@ -23,20 +24,43 @@ const about = {
 				<span>{`${about.name.last}.`}</span>
 			</h1>
 		</article>
-		<article class='flex justify-end p-4'>
-			<span class='shadow-lG grid w-1/2 grid-cols-4 gap-4 bg-slate-700 p-4'>
-				<p class='col-span-2 border border-yellow-200 p-2 text-slate-50'>
-					I build and design responsive and aesthetically pleasing websites and
-					apps.
-				</p>
-				<p class='col-span-2 border border-yellow-200 p-2 text-slate-50'>
-					I help brands scale and expand their online presence.
-				</p>
+		<section class='flex justify-start'>
+			<span class='grid w-1/2 grid-cols-4 gap-4 bg-slate-700 p-4 shadow-lg'>
+				<article
+					class='col-span-2 flex w-full items-start border border-yellow-200 p-4 text-slate-50'
+				>
+					<figure
+						class='mr-4 flex h-12 w-12 items-center border border-yellow-200 bg-slate-800'
+					>
+						<Icon pack='mdi' name='account' />
+					</figure>
+					<p class='w-full text-lg'>
+						I build and design responsive and aesthetically pleasing websites
+						and apps.
+					</p>
+				</article>
+				<article
+					class='col-span-2 flex w-full items-start border border-yellow-200 p-4 text-slate-50'
+				>
+					<figure
+						class='mr-4 flex h-12 w-12 items-center border border-yellow-200 bg-slate-800'
+					>
+						<Icon pack='mdi' name='account' />
+					</figure>
+					<p class='w-full text-lg'>
+						I help brands scale and expand their online presence.
+					</p>
+				</article>
 			</span>
-			<button class='ml-4 bg-yellow-200 px-4 py-2 text-slate-900'
-				>Learn More</button
-			>
-		</article>
+			<aside class='flex h-full flex-col'>
+				<button class='ml-4 h-1/2 bg-yellow-200 px-4 py-2 text-slate-900'
+					>Learn More</button
+				>
+				<button class='mt-4 ml-4 h-1/2 bg-yellow-200 px-4 py-2 text-slate-900'
+					>Get In Touch</button
+				>
+			</aside>
+		</section>
 	</section>
 	<section class='mx-4 mt-24'>
 		<h2 class='mb-12 font-display text-7xl font-semibold text-yellow-200'>
