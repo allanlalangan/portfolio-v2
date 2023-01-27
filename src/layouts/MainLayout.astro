@@ -23,12 +23,13 @@ const year = date.getFullYear();
 		<header
 			class='fixed top-0 flex h-[10vh] w-full items-center justify-between bg-gray-900 px-4 shadow'
 		>
-			<a
-				href='/'
-				class='w-fit font-times text-5xl font-bold italic text-yellow-200'
-			>
-				{icon}
-			</a>
+			<figure class='flex items-center text-yellow-200'>
+				<a href='/' class='w-fit font-times text-5xl font-bold italic'>
+					{icon}
+				</a>
+				<span class='flex items-center font-times'>©</span>
+			</figure>
+
 			<nav class='ml-8 flex w-full items-center justify-between'>
 				<ul class='flex justify-start'>
 					<li class='mx-4'><a href='/projects'>Projects</a></li>
