@@ -1,0 +1,61 @@
+---
+import LinkedInIcon from './LinkedInIcon.astro';
+import TwitchIcon from './TwitchIcon.astro';
+import TwitterIcon from './TwitterIcon.astro';
+const icon = 'ᾰ';
+
+const about = {
+	name: { first: 'Allan', last: 'Lalangan' },
+	title: 'Front End Engineer',
+	skills: ['HTML', 'CSS', 'JavaScript'],
+};
+---
+
+<section class='mx-4 flex h-[85vh] min-h-screen flex-col justify-center'>
+	<figure class='mb-4 flex items-baseline'>
+		<a
+			href='/'
+			class='w-fit font-times text-5xl font-bold italic text-yellow-200'
+		>
+			{icon}
+		</a>
+		<span class='flex items-center font-times text-yellow-200'>©</span>
+	</figure>
+	<article class='flex flex-col items-baseline md:ml-12 md:flex-row'>
+		<span
+			class='mb-4 h-fit border-b-2 border-r-2 border-yellow-200 pr-4 pb-2 text-4xl font-light'
+		>
+			0.
+		</span>
+		<p class='ml-4 text-xl'>
+			I'm Allan. A Software Developer with a background in Art & Design. I build
+			full-stack web applications and specialize in JavaScript and front-end
+			frameworks. You can catch my weekly coding livestreams on Twitch.
+		</p>
+	</article>
+	<nav
+		class='mx-4 mt-12 flex flex-col-reverse md:mx-24 md:flex-row md:items-center'
+	>
+		<ul class='flex flex-col'>
+			<li class=''><a href=''>Projects</a></li>
+			<li class=''><a href=''>Blog</a></li>
+			<li class=''><a href=''>Links</a></li>
+		</ul>
+		<aside
+			class='mb-8 flex w-fit justify-evenly border border-yellow-200 md:mx-12 md:mb-0'
+		>
+			<a class='flex w-32 flex-col items-center py-4' href=''
+				><TwitterIcon /><span>Twitter</span></a
+			>
+
+			<a
+				class='flex w-32 flex-col items-center border-x-2 border-yellow-200 py-4 px-4'
+				href=''><TwitchIcon /><span>Twitch</span></a
+			>
+
+			<a class='flex w-32 flex-col items-center py-4' href=''
+				><LinkedInIcon /><span>LinkedIn</span></a
+			>
+		</aside>
+	</nav>
+</section>
