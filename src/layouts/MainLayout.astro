@@ -12,7 +12,7 @@ const year = date.getFullYear();
 		<link rel='preconnect' href='https://fonts.googleapis.com' />
 		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
 		<link
-			href='https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap'
+			href='https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Martel:wght@200;300;400;600;700;800;900&display=swap'
 			rel='stylesheet'
 		/>
 		<meta name='viewport' content='width=device-width' />
@@ -20,7 +20,7 @@ const year = date.getFullYear();
 		<title>{title}</title>
 	</head>
 	<body class='bg-gray-900 font-body text-slate-50'>
-		<header
+		<!-- <header
 			class='fixed top-0 flex h-[10vh] w-full items-center justify-between bg-gray-900 px-4 shadow'
 		>
 			<figure class='flex items-center text-yellow-200'>
@@ -30,18 +30,17 @@ const year = date.getFullYear();
 				<span class='flex items-center font-times'>©</span>
 			</figure>
 
-			<nav class='ml-8 flex w-full items-center justify-between'>
+			<nav class='ml-8 flex w-full items-center justify-end'>
 				<ul class='flex justify-start'>
 					<li class='mx-4'><a href='/projects'>Projects</a></li>
 					<li class='mx-4'><a href='/about'>About Me</a></li>
-					<li class='mx-4'><a href='/contact'>Contact</a></li>
 				</ul>
 				<button class='bg-yellow-200 px-4 py-2 font-bold text-gray-900'
 					>Contact</button
 				>
 			</nav>
-		</header>
-		<main class='mt-[10vh]'>
+		</header> -->
+		<main class=''>
 			<slot />
 		</main>
 		<footer class='p-12'><p>Allan Lalangan © {year}</p></footer>

@@ -5,8 +5,8 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				times: ['"Times New Roman"', 'serif'],
-				body: ['"Space Grotesk"', 'serif'],
-				display: ['"Syne"', 'serif'],
+				body: ['"DM Sans"', 'sans-serif'],
+				heading: ['"DM Mono"', 'serif'],
 			},
 		},
 	},
