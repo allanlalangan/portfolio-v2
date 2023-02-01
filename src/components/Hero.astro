@@ -11,7 +11,7 @@ const about = {
 };
 ---
 
-<section class='mx-4 flex h-[85vh] min-h-screen flex-col justify-center'>
+<section class='mx-4 flex min-h-screen flex-col justify-center'>
 	<figure class='mb-4 flex items-baseline'>
 		<a
 			href='/'
@@ -21,20 +21,22 @@ const about = {
 		</a>
 		<span class='flex items-center font-times text-yellow-200'>©</span>
 	</figure>
-	<article class='flex flex-col items-baseline md:ml-12 md:flex-row'>
-		<span
-			class='mb-4 h-fit border-b-2 border-r-2 border-yellow-200 pr-4 pb-2 text-4xl font-light'
-		>
-			0.
-		</span>
-		<p class='ml-4 text-xl'>
+	<article class='flex flex-col items-baseline md:mx-12 md:flex-row'>
+		<h2 class='mb-12 flex items-baseline'>
+			<span
+				class='h-12 w-12 border-b-2 border-r-2 border-yellow-200 text-4xl font-light'
+			>
+				0.
+			</span>
+		</h2>
+		<p class='text-xl sm:mx-4'>
 			I'm Allan. A Software Developer with a background in Art & Design. I build
 			full-stack web applications and specialize in JavaScript and front-end
 			frameworks. You can catch my weekly coding livestreams on Twitch.
 		</p>
 	</article>
 	<nav
-		class='mx-4 mt-12 flex flex-col-reverse md:mx-24 md:flex-row md:items-center'
+		class='mt-12 flex flex-col-reverse text-xl sm:mx-4 md:mx-12 md:flex-row md:items-center'
 	>
 		<ul class='flex flex-col'>
 			<li class=''><a href=''>Projects</a></li>
@@ -44,16 +46,16 @@ const about = {
 		<aside
 			class='mb-8 flex w-fit justify-evenly border border-yellow-200 md:mx-12 md:mb-0'
 		>
-			<a class='flex w-32 flex-col items-center py-4' href=''
+			<a class='flex w-24 flex-col items-center py-4 sm:w-32' href=''
 				><TwitterIcon /><span>Twitter</span></a
 			>
 
 			<a
-				class='flex w-32 flex-col items-center border-x-2 border-yellow-200 py-4 px-4'
+				class='flex w-24 flex-col items-center border-x border-yellow-200 py-4 px-4 sm:w-32'
 				href=''><TwitchIcon /><span>Twitch</span></a
 			>
 
-			<a class='flex w-32 flex-col items-center py-4' href=''
+			<a class='flex w-24 flex-col items-center py-4 sm:w-32' href=''
 				><LinkedInIcon /><span>LinkedIn</span></a
 			>
 		</aside>
