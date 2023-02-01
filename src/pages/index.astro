@@ -1,46 +1,28 @@
 ---
-import ServiceCard from '../components/ServiceCard.astro';
 import MainLayout from '../layouts/MainLayout.astro';
-import { services, projects } from '../data/data';
+import { projects } from '../data/data';
 import ProjectCard from '../components/ProjectCard.astro';
 
-const about = {
-	name: { first: 'Allan', last: 'Lalangan' },
-	title: 'Front End Engineer',
-	skills: ['HTML', 'CSS', 'JavaScript'],
-};
+import Hero from '../components/Hero.astro';
 ---
 
 <MainLayout title='Allan Lalangan | Front-End Engineer'>
-	<section class='mx-4 flex h-[85vh] flex-col justify-center'>
-		<!-- <p class='text-xl'>Hello, world. I'm</p> -->
-		<p class='text-3xl md:text-5xl'>Software Developer</p>
-		<h1
-			class='flex flex-col font-display text-8xl font-bold text-yellow-200 md:text-8xl'
-		>
-			<span>{`${about.name.first}`}</span>
-			<span>{`${about.name.last}.`}</span>
-		</h1>
-	</section>
-	<section class='mx-4 mt-24'>
-		<h2 class='mb-12 font-display text-6xl font-semibold text-yellow-200'>
-			What I Do
+	<Hero />
+	<section class='mx-4 mt-24 sm:mx-8 md:mx-16'>
+		<!-- <h2 class='mb-12 text-7xl font-semibold text-yellow-200'>What I Do</h2>
+			<ul class='grid grid-cols-12 gap-4 px-4'>
+				{services?.map((service, i) => <ServiceCard key={i} service={service} />)}
+			</ul> -->
+		<h2 class='mb-12 flex items-baseline font-heading'>
+			<span
+				class='h-12 w-12 border-b-2 border-r-2 border-yellow-200 text-4xl font-light -tracking-widest'
+			>
+				1.
+			</span>
+			<p class='ml-4 font-heading text-3xl'>Selected Works</p>
 		</h2>
-		<ul class='grid grid-cols-12 gap-4 px-4'>
-			{services?.map((service, i) => <ServiceCard key={i} service={service} />)}
-		</ul>
-	</section>
-	<section class='mx-4 mt-24'>
-		<h2 class='mb-12 font-display text-6xl font-semibold text-yellow-200'>
-			Selected Works
-		</h2>
-		<ul class='mx-24 grid grid-cols-12 gap-4'>
+		<ul class='grid grid-cols-12 gap-4 lg:mx-16'>
 			{projects?.map((project, i) => <ProjectCard key={i} project={project} />)}
 		</ul>
-	</section>
-	<section class='mx-4 mt-24'>
-		<h2 class='mb-12 font-display text-6xl font-semibold text-yellow-200'>
-			More About Me
-		</h2>
 	</section>
 </MainLayout>
