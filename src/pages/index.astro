@@ -7,22 +7,36 @@ import Hero from '../components/Hero.astro';
 ---
 
 <MainLayout title='Allan Lalangan | Front-End Engineer'>
-	<Hero />
-	<section class='mx-4 mt-24 sm:mx-8 md:mx-16'>
-		<!-- <h2 class='mb-12 text-7xl font-semibold text-yellow-200'>What I Do</h2>
+  <Hero />
+  <section class='mx-4 mt-24 sm:mx-8 md:mx-16'>
+    <!-- <h2 class='mb-12 text-7xl font-semibold text-yellow-200'>What I Do</h2>
 			<ul class='grid grid-cols-12 gap-4 px-4'>
 				{services?.map((service, i) => <ServiceCard key={i} service={service} />)}
 			</ul> -->
-		<h2 class='mb-12 flex items-baseline font-heading'>
-			<span
-				class='h-12 w-12 border-b-2 border-r-2 border-yellow-200 text-4xl font-light -tracking-widest'
-			>
-				1.
-			</span>
-			<p class='ml-4 font-heading text-3xl'>Selected Works</p>
-		</h2>
-		<ul class='grid grid-cols-12 gap-4 lg:mx-16'>
-			{projects?.map((project, i) => <ProjectCard key={i} project={project} />)}
-		</ul>
-	</section>
+    <h2 class='mb-12 flex items-baseline font-heading'>
+      <span
+        class='h-12 w-12 border-b-2 border-r-2 border-yellow-200 text-4xl font-light -tracking-widest'
+      >
+        1.
+      </span>
+      <p class='ml-4 font-heading text-3xl'>Selected Works</p>
+    </h2>
+    <ul class='grid grid-cols-12 gap-4 lg:mx-16'>
+      {projects?.map((project, i) => <ProjectCard key={i} project={project} />)}
+    </ul>
+  </section>
+  <section class='mx-4 mt-24 sm:mx-8 md:mx-16'>
+    <!-- <h2 class='mb-12 text-7xl font-semibold text-yellow-200'>What I Do</h2>
+			<ul class='grid grid-cols-12 gap-4 px-4'>
+				{services?.map((service, i) => <ServiceCard key={i} service={service} />)}
+			</ul> -->
+    <h2 class='mb-12 flex items-baseline font-heading'>
+      <span
+        class='h-12 w-12 border-b-2 border-r-2 border-yellow-200 text-4xl font-light -tracking-widest'
+      >
+        2.
+      </span>
+      <p class='ml-4 font-heading text-3xl'>More About Me</p>
+    </h2>
+  </section>
 </MainLayout>
