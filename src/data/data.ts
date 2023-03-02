@@ -29,6 +29,30 @@ import projectMe from '../../public/assets/project-me.png';
 import mma from '../public/assets/mma.png';
 import stars from '../public/assets/stars.png';
 
+import twitchIcon from '../components/TwitchIcon.astro';
+import twitterIcon from '../components/TwitterIcon.astro';
+import githubIcon from '../components/GithubIcon.astro';
+import linkedinIcon from '../components/LinkedInIcon.astro';
+
+export const socialLinks = [
+	{
+		name: 'Twitch',
+		url: 'https://www.twitch.tv/codewithallan',
+	},
+	{
+		name: 'Twitter',
+		url: 'https://twitter.com/allanla_dev',
+	},
+	{
+		name: 'LinkedIn',
+		url: 'https://www.linkedin.com/in/allan-lalangan/',
+	},
+	{
+		name: 'Github',
+		url: 'https://github.com/allanlalangan',
+	},
+];
+
 export const services: Service[] = [
 	{
 		name: 'UI/UX Design',

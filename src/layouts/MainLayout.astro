@@ -23,30 +23,12 @@ const year = date.getFullYear();
 		<title>{title}</title>
 	</head>
 	<body class='bg-gray-900 font-body text-gray-50'>
-		<!-- <header
-			class='fixed top-0 flex h-[10vh] w-full items-center justify-between bg-gray-900 px-4 shadow'
-		>
-			<figure class='flex items-center text-yellow-200'>
-				<a href='/' class='w-fit font-times text-5xl font-bold italic'>
-					{icon}
-				</a>
-				<span class='flex items-center font-times'>©</span>
-			</figure>
-
-			<nav class='ml-8 flex w-full items-center justify-end'>
-				<ul class='flex justify-start'>
-					<li class='mx-4'><a href='/projects'>Projects</a></li>
-					<li class='mx-4'><a href='/about'>About Me</a></li>
-				</ul>
-				<button class='bg-yellow-200 px-4 py-2 font-bold text-gray-900'
-					>Contact</button
-				>
-			</nav>
-		</header> -->
 		<main class=''>
 			<slot />
 		</main>
-		<footer class='p-12'><p>Allan Lalangan © {year}</p></footer>
+		<footer class='mt-12 bg-gray-800 px-12 py-8 tracking-wide text-yellow-200'>
+			<p>Allan Lalangan © {year}</p>
+		</footer>
 		<p></p>
 	</body>
 </html>

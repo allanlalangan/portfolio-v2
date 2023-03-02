@@ -2,6 +2,8 @@
 import LinkedInIcon from './LinkedInIcon.astro';
 import TwitchIcon from './TwitchIcon.astro';
 import TwitterIcon from './TwitterIcon.astro';
+import { socialLinks } from '../data/data';
+import GithubIcon from './GithubIcon.astro';
 const icon = 'ᾰ';
 
 const about = {
@@ -37,48 +39,70 @@ const about = {
 		</p>
 	</article>
 	<nav
-		class='mt-24 flex flex-col-reverse font-heading text-xl sm:mx-4 md:mx-8 md:flex-row md:items-center'
+		class='mt-8 flex flex-col-reverse font-heading text-xl sm:mx-4 md:mx-12 md:flex-row md:items-center'
 	>
-		<ul class='flex flex-col'>
+		<ul class='my-8 flex flex-col md:my-0'>
 			<li class='flex transition-all hover:translate-x-2'>
-				<a class='w-full' href=''>Projects</a>
+				<a href='#projects' class='w-full' href=''>Projects</a>
 			</li>
 			<li class='flex transition-all hover:translate-x-2'>
-				<a class='w-full' href=''>Blog</a>
+				<a
+					class='w-full'
+					target='_blank'
+					rel='noreferrer noopener'
+					href='https://allanla.hashnode.dev/'>Blog</a
+				>
 			</li>
-			<li class='flex transition-all hover:translate-x-2'>
+			<!-- <li class='flex transition-all hover:translate-x-2'>
 				<a class='w-full' href=''>Links</a>
-			</li>
+			</li> -->
 		</ul>
 		<aside
-			class='mb-8 flex justify-evenly border-2 border-yellow-200 text-yellow-200 sm:w-fit md:mx-12 md:mb-0'
+			class='mb-8 grid grid-cols-4 justify-evenly border border-yellow-200 text-yellow-200 sm:w-fit md:ml-12 md:mb-0'
 		>
-			<a
-				class='flex w-1/3 flex-col items-center py-4 transition hover:bg-yellow-200 hover:text-gray-900 sm:w-32'
-				href=''
-				><TwitchIcon
-					size='2.5rem'
-					styles='mb-2 flex w-32 items-center justify-center'
-				/><span>Twitch</span></a
-			>
+			{
+				socialLinks?.map(({ name, url }, i, arr) => (
+					<a
+						aria-label={name}
+						title={name}
+						target='_blank'
+						rel='noreferrer noopener'
+						class={`col-span-2 flex flex-col items-center border border-yellow-200 py-4 px-4 transition hover:bg-yellow-200 hover:text-gray-900 sm:col-span-1 sm:w-32 ${
+							(i === 0 && 'md:border-r') ||
+							(i === arr.length - 1 && 'md:border-l') ||
+							'md:border-x'
+						}`}
+						href={url}
+					>
+						{(name.toLowerCase() === 'github' && (
+							<GithubIcon
+								size='2.5rem'
+								styles='mb-2 flex w-32 items-center justify-center'
+							/>
+						)) ||
+							(name.toLowerCase() === 'twitter' && (
+								<TwitterIcon
+									size='2.5rem'
+									styles='mb-2 flex w-32 items-center justify-center'
+								/>
+							)) ||
+							(name.toLowerCase() === 'twitch' && (
+								<TwitchIcon
+									size='2.5rem'
+									styles='mb-2 flex w-32 items-center justify-center'
+								/>
+							)) ||
+							(name.toLowerCase() === 'linkedin' && (
+								<LinkedInIcon
+									size='2.5rem'
+									styles='mb-2 flex w-32 items-center justify-center'
+								/>
+							))}
 
-			<a
-				class='flex w-1/3 flex-col items-center border-x-2 border-yellow-200 py-4 px-4 transition hover:bg-yellow-200 hover:text-gray-900 sm:w-32'
-				href=''
-				><TwitterIcon
-					size='2.5rem'
-					styles='mb-2 flex w-32 items-center justify-center'
-				/><span>Twitter</span></a
-			>
-
-			<a
-				class='flex w-1/3 flex-col items-center py-4 transition hover:bg-yellow-200 hover:text-gray-900 sm:w-32'
-				href=''
-				><LinkedInIcon
-					size='2.5rem'
-					styles='mb-2 flex w-32 items-center justify-center'
-				/><span>LinkedIn</span></a
-			>
+						<span class='capitalize'>{name}</span>
+					</a>
+				))
+			}
 		</aside>
 	</nav>
 </section>
