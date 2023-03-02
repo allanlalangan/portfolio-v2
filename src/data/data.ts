@@ -29,6 +29,13 @@ import projectMe from '../../public/assets/project-me.png';
 import mma from '../public/assets/mma.png';
 import stars from '../public/assets/stars.png';
 
+export const socialLinks = {
+	twitch: 'https://www.twitch.tv/codewithallan',
+	twitter: 'https://twitter.com/allanla_dev',
+	linkedin: 'https://www.linkedin.com/in/allan-lalangan/',
+	github: 'https://github.com/allanlalangan',
+};
+
 export const services: Service[] = [
 	{
 		name: 'UI/UX Design',
