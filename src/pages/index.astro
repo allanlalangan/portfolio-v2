@@ -21,7 +21,7 @@ import Hero from '../components/Hero.astro';
 			</span>
 			<p class='ml-4 font-heading text-3xl'>Selected Works</p>
 		</h2>
-		<ul class='grid grid-cols-12 gap-4 lg:mx-32'>
+		<ul class='grid grid-cols-12 gap-4 xl:mx-32'>
 			{projects?.map((project, i) => <ProjectCard key={i} project={project} />)}
 		</ul>
 	</section>
