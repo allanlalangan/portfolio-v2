@@ -1,5 +1,4 @@
 ---
-const icon = 'ᾰ';
 const { title } = Astro.props;
 const date = new Date();
 const year = date.getFullYear();
@@ -8,7 +7,11 @@ const year = date.getFullYear();
 <html lang='en'>
 	<head>
 		<meta charset='utf-8' />
-		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<link
+			rel='icon'
+			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👹</text></svg>"
+		/>
+		<!-- <link rel='icon' type='image/svg+xml' href='/favicon.svg' /> -->
 		<link rel='preconnect' href='https://fonts.googleapis.com' />
 		<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
 		<link
@@ -19,7 +22,7 @@ const year = date.getFullYear();
 		<meta name='generator' content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class='bg-gray-900 font-body text-slate-50'>
+	<body class='bg-gray-900 font-body text-gray-50'>
 		<!-- <header
 			class='fixed top-0 flex h-[10vh] w-full items-center justify-between bg-gray-900 px-4 shadow'
 		>
