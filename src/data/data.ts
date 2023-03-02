@@ -24,10 +24,10 @@ type Project = {
 	demo?: DemoCredentials;
 };
 
-import nomad from '../../public/assets/nomad-travel.png';
-import projectMe from '../../public/assets/project-me.png';
-import mma from '../../public/assets/mma.png';
-import stars from '../public/assets/stars.png';
+import nomad from '/assets/nomad-travel.png';
+import projectMe from '/assets/project-me.png';
+import mma from '/assets/mma.png';
+import stars from '/assets/stars.png';
 
 import twitchIcon from '../components/TwitchIcon.astro';
 import twitterIcon from '../components/TwitterIcon.astro';
