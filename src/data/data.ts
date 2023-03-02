@@ -26,7 +26,7 @@ type Project = {
 
 import nomad from '../../public/assets/nomad-travel.png';
 import projectMe from '../../public/assets/project-me.png';
-import mma from '../public/assets/mma.png';
+import mma from '../../public/assets/mma.png';
 import stars from '../public/assets/stars.png';
 
 import twitchIcon from '../components/TwitchIcon.astro';
