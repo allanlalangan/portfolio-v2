@@ -36,6 +36,10 @@ import linkedinIcon from '../components/LinkedInIcon.astro';
 
 export const socialLinks = [
 	{
+		name: 'Github',
+		url: 'https://github.com/allanlalangan',
+	},
+	{
 		name: 'Twitch',
 		url: 'https://www.twitch.tv/codewithallan',
 	},
@@ -46,10 +50,6 @@ export const socialLinks = [
 	{
 		name: 'LinkedIn',
 		url: 'https://www.linkedin.com/in/allan-lalangan/',
-	},
-	{
-		name: 'Github',
-		url: 'https://github.com/allanlalangan',
 	},
 ];
 
