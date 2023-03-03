@@ -80,7 +80,7 @@ export const projects: Project[] = [
 	{
 		title: 'Stars Astro',
 		description:
-			'A niche social platform. Generate and post astrology charts. Share cosmic wisdom and/or nonsense. Full stack app with a CRUD REST API and user authentication.',
+			'A niche social platform. Registered users can generate and post astrology charts. Front end built with React and styled with Tailwind CSS. REST API and authentication middleware built with Node.js, Express, MongoDB.',
 		tech: [
 			'express',
 			'mongodb',
@@ -100,7 +100,7 @@ export const projects: Project[] = [
 	{
 		title: 'Nomad Travel',
 		description:
-			'Locate and filter popular restaurants, hotels, and attractions anywhere in the world.',
+			'Locate and filter popular restaurants, hotels, and attractions anywhere in the world. Implements Google APIs to display map markers and information. A single page application built with React and Material UI components.',
 		tech: ['react', 'material ui', 'google apis', 'rest api'],
 		image: { src: nomad, alt: 'Nomad Travel map with marker' },
 		repo: 'https://github.com/allanlalangan/nomad-travel',
@@ -119,7 +119,8 @@ export const projects: Project[] = [
 	// },
 	{
 		title: 'project.Me',
-		description: 'A fullstack to-do list app. Registered users can save goals.',
+		description:
+			'A fullstack to-do list app. Registered users can save goals. Front end built with React and styled with Sass. REST API and authentication middleware built with Node.js, Express, MongoDB.',
 		tech: [
 			'express',
 			'mongodb',
