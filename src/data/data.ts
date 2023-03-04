@@ -120,7 +120,7 @@ export const projects: Project[] = [
 	{
 		title: 'project.Me',
 		description:
-			'A fullstack to-do list app. Registered users can save goals. Front end built with React and styled with Sass. REST API and authentication middleware built with Node.js, Express, MongoDB. State managed with Redux Toolkit.',
+			'A fullstack to-do list app. Registered users can save goals. Front end built with React and styled with CSS/Sass. REST API and authentication middleware built with Node.js, Express, MongoDB. State managed with Redux Toolkit.',
 		tech: [
 			'express',
 			'mongodb',
