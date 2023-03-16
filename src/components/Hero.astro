@@ -5,38 +5,44 @@ const icon = 'ᾰ';
 ---
 
 <section class='mx-4 flex min-h-screen flex-col justify-center'>
-	<figure class='mb-4 flex items-baseline'>
+	<figure class='logo mb-4 flex translate-y-10 items-baseline opacity-0'>
 		<a
 			href='/'
-			class='logo w-fit font-times text-8xl font-bold italic text-yellow-200'
+			class='w-fit font-times text-8xl font-bold italic text-yellow-200'
 		>
 			{icon}
 		</a>
 		<span class='flex items-center font-times text-yellow-200'>©</span>
 	</figure>
 	<article class='flex flex-col items-baseline md:mx-12 md:flex-row'>
-		<h2 class='mb-12 flex items-baseline'>
-			<span></span>
+		<h2
+			class='heading-bullet mb-12 flex translate-y-10 items-baseline opacity-0'
+		>
 			<span
 				class='h-12 w-12 border-b-2 border-r-2 border-yellow-200 font-heading text-4xl font-light -tracking-widest'
 			>
 				0.
 			</span>
 		</h2>
-		<p class='text-xl sm:mx-4 lg:w-2/3 xl:w-1/2'>
+		<p class='bio translate-y-10 text-xl opacity-0 sm:mx-4 lg:w-2/3 xl:w-1/2'>
 			Hello hi. I'm Allan. A Software Engineer with a background in Art &
 			Design. I build full-stack web applications and specialize front end web
 			development. You can catch my weekly coding livestreams on Twitch.
 		</p>
 	</article>
 	<nav
+		aria-label='Main Navigation'
 		class='mt-8 flex flex-col-reverse font-heading text-xl sm:mx-4 md:mx-12 md:flex-row md:items-center'
 	>
 		<ul class='my-8 flex flex-col md:my-0'>
-			<li class='flex transition-all hover:translate-x-2'>
+			<li
+				class='nav-link link-hover flex translate-y-10 underline-offset-2 opacity-0 hover:underline'
+			>
 				<a href='#projects' class='w-full' href=''>Projects</a>
 			</li>
-			<li class='flex transition-all hover:translate-x-2'>
+			<li
+				class='nav-link link-hover flex translate-y-10 underline-offset-2 opacity-0 hover:underline'
+			>
 				<a
 					class='w-full'
 					target='_blank'
@@ -46,6 +52,7 @@ const icon = 'ᾰ';
 			</li>
 		</ul>
 		<aside
+			aria-label='Social Contact Links'
 			class='social-links grid translate-y-10 grid-cols-4 justify-evenly border border-yellow-200 text-yellow-200 opacity-0 sm:w-fit md:ml-12 md:mb-0'
 		>
 			{
@@ -127,29 +134,50 @@ const icon = 'ᾰ';
 	</nav>
 </section>
 <script>
-	const socials = document.querySelector('.social-links');
-	const links = document.querySelectorAll('.social-link');
-	const icons = document.querySelectorAll('.social-icon');
-	const socialTitles = document.querySelectorAll('.social-caption');
-
-	icons.forEach((icon, i) => {
-		gsap.to(icon, {
-			opacity: 1,
-			duration: 1,
-			delay: i * 0.3,
-		});
-	});
-
-	socialTitles.forEach((title, i) => {
-		gsap.to(title, {
-			opacity: 1,
-			duration: 1,
-			delay: i * 0.3,
-		});
-	});
-	gsap.to(socials, {
+	gsap.to('.logo', {
 		opacity: 1,
 		duration: 1,
+		delay: 0.2,
 		y: 0,
+	});
+
+	gsap.to('.heading-bullet', { opacity: 1, duration: 1, delay: 0.3, y: 0 });
+
+	gsap.to('.bio', { opacity: 1, duration: 1, delay: 0.4, y: 0 });
+
+	gsap.to('.hero-article', {
+		opacity: 1,
+		duration: 1,
+		delay: 0.3,
+		y: 0,
+	});
+
+	gsap.to('.nav-link', {
+		opacity: 1,
+		duration: 1,
+		delay: 0.7,
+		stagger: 0.3,
+		translateY: 0,
+	});
+
+	gsap.to('.social-links', {
+		opacity: 1,
+		duration: 1,
+		delay: 0.6,
+		y: 0,
+	});
+
+	gsap.to('.social-icon', {
+		opacity: 1,
+		duration: 1,
+		delay: 0.6,
+		stagger: 0.3,
+	});
+
+	gsap.to('.social-caption', {
+		opacity: 1,
+		duration: 1,
+		delay: 0.6,
+		stagger: 0.3,
 	});
 </script>
