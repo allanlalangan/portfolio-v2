@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+	.sticky-banner {
+		position: sticky;
+		top: 0;
+	}
+}
+
+@layer utilities {
+}
