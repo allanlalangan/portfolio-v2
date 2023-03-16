@@ -7,14 +7,15 @@ import Hero from '../components/Hero.astro';
 ---
 
 <MainLayout title='Allan Lalangan | Front-End Engineer'>
+	<Hero />
 	<span
-		class='banner fixed z-10 flex w-full -translate-y-full items-center justify-center bg-yellow-200 py-2 text-center font-heading text-2xl font-bold tracking-widest text-slate-900'
+		id='banner'
+		class='flex h-[6vh] w-full items-center justify-center bg-yellow-200 py-2 text-center font-heading text-2xl font-bold tracking-widest text-slate-900'
 	>
 		<span class='mx-2'>⚠️</span>
 		<span>Currently Under Construction</span>
 		<span class='mx-2'>⚠️</span>
 	</span>
-	<Hero />
 	<section id='projects' class='mx-4 mt-24 sm:mx-8 md:mx-16'>
 		<h2 class='mb-12 flex items-baseline font-heading'>
 			<span
@@ -31,5 +32,23 @@ import Hero from '../components/Hero.astro';
 </MainLayout>
 
 <script>
-	gsap.to('.banner', { y: 0, duration: 1, delay: 0.7 });
+	window.onscroll = function () {
+		myFunction();
+	};
+
+	// Get the header
+	const header: HTMLElement = document.getElementById('banner');
+
+	// Get the offset position of the navbar
+	const sticky = header.offsetTop;
+	console.log(header);
+
+	// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+	function myFunction() {
+		if (window.pageYOffset > sticky) {
+			header.classList.add('sticky-banner');
+		} else {
+			header.classList.remove('sticky-banner');
+		}
+	}
 </script>
