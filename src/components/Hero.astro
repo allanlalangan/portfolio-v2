@@ -1,6 +1,7 @@
 ---
 import { socialLinks } from '../data/data';
-
+const { about } = Astro.props;
+console.log(about);
 const icon = 'ᾰ';
 ---
 
@@ -25,9 +26,7 @@ const icon = 'ᾰ';
 			</span>
 		</h2>
 		<p class='bio translate-y-10 text-xl opacity-0 sm:mx-4 lg:w-2/3 xl:w-1/2'>
-			Hello hi. I'm Allan. A Software Engineer with a background in Art &
-			Design. I build full-stack web applications and specialize front end web
-			development. You can catch my weekly coding livestreams on Twitch.
+			{about.bio}
 		</p>
 	</article>
 	<nav
