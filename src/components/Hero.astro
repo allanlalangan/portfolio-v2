@@ -1,7 +1,5 @@
 ---
-import { socialLinks } from '../data/data';
 const { about } = Astro.props;
-console.log(about);
 const icon = 'ᾰ';
 ---
 
@@ -55,7 +53,7 @@ const icon = 'ᾰ';
 			class='social-links grid translate-y-10 grid-cols-4 justify-evenly border border-yellow-200 text-yellow-200 opacity-0 sm:w-fit md:ml-12 md:mb-0'
 		>
 			{
-				socialLinks?.map(({ name, url }, i, arr) => (
+				about.socialLinks?.map(({ name, url }, i, arr) => (
 					<a
 						aria-label={name}
 						title={name}
