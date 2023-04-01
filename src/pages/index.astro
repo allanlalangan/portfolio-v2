@@ -1,13 +1,28 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import { projects } from '../data/data';
+// import { projects } from '../data/data';
 import ProjectCard from '../components/ProjectCard.astro';
-
+import { useSanityClient, groq } from 'astro-sanity';
 import Hero from '../components/Hero.astro';
+
+export async function getProjects() {
+	const query = groq`*[_type == "project"]`;
+	const projects = await useSanityClient().fetch(query);
+	return projects;
+}
+
+export async function getAbout() {
+	const query = groq`*[_type == "about"]`;
+	const about = await useSanityClient().fetch(query);
+	return about;
+}
+
+const projects = await getProjects();
+const about = await getAbout();
 ---
 
 <MainLayout title='Allan Lalangan | Front-End Engineer'>
-	<Hero />
+	<Hero about={about[0]} />
 	<span
 		id='banner'
 		class='flex w-full items-center justify-center bg-yellow-200 py-2 text-center font-heading text-2xl font-bold tracking-widest text-slate-900'
