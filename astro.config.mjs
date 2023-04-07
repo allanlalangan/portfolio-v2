@@ -8,13 +8,14 @@ import sanity from 'astro-sanity';
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		tailwind(),
-		sanity({
-			projectId: 'rzka3686',
-			dataset: 'production',
-			apiVersion: '2021-03-25',
-			useCdn: true,
-		}),
-	],
+  integrations: [
+    tailwind(),
+    sanity({
+      projectId: 'rzka3686',
+      dataset: 'production',
+      apiVersion: '2021-03-25',
+      useCdn: true,
+      token: process.env.SANITY_SECRET_TOKEN,
+    }),
+  ],
 });
