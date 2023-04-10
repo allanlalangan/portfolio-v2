@@ -3,14 +3,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import Hero from "../components/Hero.astro";
 
-import { getAbout, getProjects } from "../lib/api";
+import { getProjects } from "../lib/api";
 
 const projects = await getProjects();
-const about = await getAbout();
 ---
 
 <MainLayout title="Allan Lalangan | Front-End Engineer">
-  <Hero about={about[0]} />
+  <Hero />
   <span
     id="banner"
     class="flex w-full items-center justify-center bg-yellow-200 py-2 text-center font-heading text-2xl font-bold tracking-widest text-slate-900"
