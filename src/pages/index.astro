@@ -1,55 +1,26 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
-import Hero from "../components/Hero.astro";
+import MainLayout from '../layouts/MainLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import Hero from '../components/Hero.astro';
 
-import { getProjects } from "../lib/api";
+import { getProjects } from '../lib/api';
 
 const projects = await getProjects();
 ---
 
-<MainLayout title="Allan Lalangan | Front-End Engineer">
-  <Hero />
-  <span
-    id="banner"
-    class="flex w-full items-center justify-center bg-yellow-200 py-2 text-center font-heading text-2xl font-bold tracking-widest text-slate-900"
-  >
-    <span class="mx-2">⚠️</span>
-    <span>Currently Under Construction</span>
-    <span class="mx-2">⚠️</span>
-  </span>
-  <section id="projects" class="mx-4 mt-24 sm:mx-8 md:mx-16">
-    <h2 class="mb-12 flex items-baseline font-heading">
-      <span
-        class="h-12 w-12 border-b-2 border-r-2 border-yellow-200 text-4xl font-light -tracking-widest"
-      >
-        1.
-      </span>
-      <p class="ml-4 font-heading text-3xl">Recent Projects</p>
-    </h2>
-    <ul class="grid grid-cols-12 gap-4 xl:mx-32">
-      {projects?.map((project, i) => <ProjectCard key={i} project={project} />)}
-    </ul>
-  </section>
+<MainLayout title='Allan Lalangan | Front-End Engineer'>
+	<Hero />
+	<section id='projects' class='mx-4 mt-24 sm:mx-8 md:mx-16'>
+		<h2 class='mb-12 flex items-baseline font-heading'>
+			<span
+				class='h-12 w-12 border-b-2 border-r-2 border-yellow-200 text-4xl font-light -tracking-widest'
+			>
+				1.
+			</span>
+			<p class='ml-4 font-heading text-3xl'>Recent Projects</p>
+		</h2>
+		<ul class='grid grid-cols-12 gap-4 xl:mx-32'>
+			{projects?.map((project, i) => <ProjectCard key={i} project={project} />)}
+		</ul>
+	</section>
 </MainLayout>
-
-<script>
-  window.onscroll = function () {
-    myFunction();
-  };
-
-  // Get the header
-  const header: HTMLElement = document.getElementById("banner");
-
-  // Get the offset position of the navbar
-  const sticky = header.offsetTop;
-
-  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-  function myFunction() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky-banner");
-    } else {
-      header.classList.remove("sticky-banner");
-    }
-  }
-</script>
